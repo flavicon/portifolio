@@ -1,0 +1,136 @@
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --title: hsl(229, 23%, 23%);
+    --text: hsl(227, 10%, 46%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--dark-cyan);
+    background-image: url(/images/bg-pattern-top.svg), url(/images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    color: var(--text);
+}
+
+h3 > span {
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content > img {
+    width: 120px;
+    border-radius: 4rem;
+    border: 5px solid white;
+    margin-top: 5rem;
+}
+
+.photo-profile {
+    display: flex;
+    justify-content: center; 
+}
+
+.profile {    
+    margin-top: 1.5rem;
+    text-align: center;
+    line-height: 2;
+}
+
+.social {
+    text-align: center;
+    margin-top: 0.5rem;
+    line-height: 2;
+    transition: 0.5s;
+}
+
+
+.social:hover {
+    transform: rotate(20deg);
+    transition: 0.5s;
+}
+
+
+.statitics > h3 {
+    font-size: 1rem;
+}
+
+.statitics > span {
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+@media (min-width: 450px){
+    .card {
+        display: grid;
+
+        background: #fff url(/images/bg-pattern-card.svg) no-repeat;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1.25rem;
+        
+        min-height: 400px;
+        max-height: 450px;
+        width: 350px;
+        box-shadow: 1px 1px 5px black;
+    }
+
+    .informations {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-between;
+        align-items: center;
+        width: 350px;
+        margin-top: 1.25rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+}
+
+@media (max-width: 400px) {
+    .card {
+        display: grid;
+
+        background: #fff url(/images/bg-pattern-card.svg) no-repeat;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1.25rem;
+        
+        min-height: 400px;
+        max-height: 450px;
+        width: 300px;
+        box-shadow: 1px 1px 5px black;
+    }
+
+    .informations {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-between;
+        align-items: center;
+        width: 300px;
+        margin-top: 1.25rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+}
